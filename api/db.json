@@ -12,43 +12,23 @@
     },
     {
       "id": 2,
-      "name": "As",
-      "lastname": "da",
-      "email": "2313@asd",
-      "password": "151",
-      "type_user": "asda",
-      "number": "123",
-      "date": "01/01/2020"
+      "name": "Daniel",
+      "lastname": "Carbajal",
+      "email": "aaa@gmail.com",
+      "password": "asdqweq",
+      "type_user": "ofertant",
+      "number": 9999999999,
+      "date": "2003-09-23"
     },
     {
       "id": 3,
-      "name": "As",
-      "lastname": "da",
-      "email": "2313@asd",
-      "password": "151",
-      "type_user": "asda",
-      "number": "123",
-      "date": "01/01/2020"
-    },
-    {
-      "id": 4,
-      "name": "oinqw",
-      "lastname": "piqwnfqw",
-      "correo": "dasi@qwpino",
-      "password": "123456",
+      "name": "Karim",
+      "lastname": "Samanamud",
+      "email": "ks@gmail.com",
+      "password": "asdqwe",
       "type_user": "postulant",
-      "number": 123456,
-      "date": "20002-11-25"
-    },
-    {
-      "id": 5,
-      "name": "qwe",
-      "lastname": "qad",
-      "correo": "asd@dasd",
-      "password": "123456",
-      "type_user": "ofertant",
-      "number": 123456,
-      "date": "4324-03-12"
+      "number": 123456789,
+      "date": "4212-03-12"
     }
   ]
 }
