@@ -30,5 +30,38 @@
       "number": 123456789,
       "date": "4212-03-12"
     }
+  ],
+
+  "ofertasLaborales":[
+    {
+      "id": 1,
+      "logo": "assets/imagenes/Tabla/interbank.png",
+      "puesto": "Data Scientist Senior de Riesgos",
+      "location": "Javier Prado, Lima",
+      "salary": "$2k-5k al mes",
+      "type": "Full Time",
+      "reputacion": "Muy Alta",
+      "fecha": "Abril 15, 2024 14:35",
+      "estado": "Activo",
+      "descripcion": "En Interbank estamos buscando sumar a nuestros equipos a los mejores talentos para seguir convirtiéndonos en el mejor banco a partir de las mejores personas y trabajar juntos por nuestro propósito de acompañar a los peruanos a cumplir sus sueños, hoy. Por ello, estamos en búsqueda de talentos que quieran sumarse a la Gerencia de Data Science asumiendo el rol Data Scientist de Riesgos.",
+      "requisitos":  [
+        "Profesional de Estadística, Ingeniería, Económicas o afines.",
+        "5 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
+        "2 años de experiencia liderando equipos.",
+        "Conocimiento de: Negocio Financiero, desde el punto de vista funcional, Estadística/Matemática (intermedio), manejo de proyectos, desarrollo de presentaciones efectivas.",
+        "MBA o Gestión de proyectos (deseable)",
+        "Lenguajes de programación: R, PHYTON",
+        "Base de datos: SQL",
+        "Cloud: AWS, Azure o Google"],
+      "beneficios": [
+        "Ser parte de la aceleración de la transformación digital de una de las empresas más importantes del Perú.",
+        "Oportunidades de desarrollo y aprendizaje continuo.",
+        "Acceso a nuestro modelo de trabajo flexible 'Interbank Eres'.",
+        "Remuneración competitiva."],
+      "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
+      "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
+      "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
+      "sueldoIMG": "assets/imagenes/Tabla/Detalles/sueldo.png"
+    }
   ]
 }

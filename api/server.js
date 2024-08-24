@@ -8,6 +8,7 @@ const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 const routes= require('./routes.json');
 
+
 //Habilitar CORS
 server.use(cors());
 
@@ -35,6 +36,56 @@ server.post('/login', (req, res) => {
       res.status(401).json({ error: 'Credenciales incorrectas' });
     }
   });
+
+
+
+// Obtener todos las ofertas laborales
+server.get('/api/v1/ofertasLaborales', (req, res) => {
+  const db = jsonServerRouter.db;
+  const ofertasLaborales = db.get('ofertasLaborales').value();
+  res.json(ofertasLaborales);
+});
+
+// Registrar una nueva oferta laboral
+server.post('/api/v1/ofertasLaborales', (req, res) => {
+  const db = jsonServerRouter.db;
+
+  const {    logo, puesto, location, salary, type, reputacion, fecha, estado, descripcion, requisitos, beneficios, puestoIMG, jornadaIMG, ubicacionIMG,
+    sueldoIMG } = req.body;
+
+  if (!logo || !puesto || !location || !salary || !type || !reputacion||!fecha||!estado||!descripcion||!requisitos||!beneficios||!puestoIMG||!jornadaIMG||!ubicacionIMG||!sueldoIMG) {
+    return res.status(400).json({ error: 'Todos los campos son requeridos: logo, puesto, location, salary, type, reputacion, fecha, estado, descripcion, requisitos, beneficios' });
+  }
+
+  const newOfertaLaboral = {
+    id: db.get('ofertasLaborales').value().length + 1,
+    logo,
+    puesto,
+    location,
+    salary,
+    type,
+    reputacion,
+    fecha,
+    estado,
+    descripcion,
+    requisitos,
+    beneficios,
+    puestoIMG,
+    jornadaIMG,
+    ubicacionIMG,
+    sueldoIMG
+  };
+
+  db.get('ofertasLaborales').push(newOfertaLaboral).write();
+
+  res.json(newOfertaLaboral);
+});
+
+
+
+
+
+
 
 
 
