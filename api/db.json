@@ -9,7 +9,10 @@
       "type_user": "string",
       "number": "90006",
       "date": "01/01/2020",
-      "Postulaciones":[1,2]
+      "Postulaciones": [
+        1,
+        2
+      ]
     },
     {
       "id": 2,
@@ -19,8 +22,7 @@
       "password": "asdqweq",
       "type_user": "ofertant",
       "number": 9999999999,
-      "date": "2003-09-23",
-      "Postulaciones":[2,1]
+      "date": "2003-09-23"
     },
     {
       "id": 3,
@@ -31,11 +33,13 @@
       "type_user": "postulant",
       "number": 123456789,
       "date": "4212-03-12",
-      "Postulaciones":[3,1]
+      "Postulaciones": [
+        1,
+        4
+      ]
     }
   ],
-
-  "ofertasLaborales":[
+  "ofertasLaborales": [
     {
       "id": 1,
       "logo": "assets/imagenes/Tabla/interbank.png",
@@ -47,7 +51,7 @@
       "fecha": "Abril 15, 2024 14:35",
       "estado": "Activo",
       "descripcion": "En Interbank estamos buscando sumar a nuestros equipos a los mejores talentos para seguir convirtiéndonos en el mejor banco a partir de las mejores personas y trabajar juntos por nuestro propósito de acompañar a los peruanos a cumplir sus sueños, hoy. Por ello, estamos en búsqueda de talentos que quieran sumarse a la Gerencia de Data Science asumiendo el rol Data Scientist de Riesgos.",
-      "requisitos":  [
+      "requisitos": [
         "Profesional de Estadística, Ingeniería, Económicas o afines.",
         "5 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
         "2 años de experiencia liderando equipos.",
@@ -55,12 +59,14 @@
         "MBA o Gestión de proyectos (deseable)",
         "Lenguajes de programación: R, PHYTON",
         "Base de datos: SQL",
-        "Cloud: AWS, Azure o Google"],
+        "Cloud: AWS, Azure o Google"
+      ],
       "beneficios": [
         "Ser parte de la aceleración de la transformación digital de una de las empresas más importantes del Perú.",
         "Oportunidades de desarrollo y aprendizaje continuo.",
         "Acceso a nuestro modelo de trabajo flexible 'Interbank Eres'.",
-        "Remuneración competitiva."],
+        "Remuneración competitiva."
+      ],
       "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
       "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
       "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
@@ -77,17 +83,19 @@
       "fecha": "Abril 2, 2024 20:18",
       "estado": "Cancelado",
       "descripcion": "Desarrolla aplicaciones Java en un entorno de trabajo remoto.",
-      "requisitos":  [
+      "requisitos": [
         "Profesional de Estadística, Ingeniería, Económicas o afines.",
         "2 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
         "1 años de experiencia liderando equipos.",
         "MBA o Gestión de proyectos (deseable)",
         "Lenguajes de programación: Java",
-        "Base de datos: SQL"],
+        "Base de datos: SQL"
+      ],
       "beneficios": [
         "Linea de carrera.",
         "Oportunidades de desarrollo y aprendizaje continuo.",
-        "Remuneración competitiva."],
+        "Remuneración competitiva."
+      ],
       "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
       "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
       "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
@@ -104,17 +112,19 @@
       "fecha": "Mar 2 , 2023 15:30",
       "estado": "Finalizado",
       "descripcion": "Encargado de la gestión y el procesamiento de datos.",
-      "requisitos":  [
+      "requisitos": [
         "Profesional de Estadística, Ingeniería, Económicas o afines.",
         "2 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
         "1 años de experiencia liderando equipos.",
         "MBA o Gestión de proyectos (deseable)",
         "Lenguajes de programación: Python",
-        "Base de datos: SQL y NOSQL"],
+        "Base de datos: SQL y NOSQL"
+      ],
       "beneficios": [
         "Linea de carrera.",
         "Oportunidades de desarrollo y aprendizaje continuo.",
-        "Remuneración competitiva."],
+        "Remuneración competitiva."
+      ],
       "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
       "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
       "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
@@ -131,17 +141,19 @@
       "fecha": "Mar 27 , 2023 11:45",
       "estado": "Activo",
       "descripcion": "Analiza datos avanzados para obtener insights empresariales.",
-      "requisitos":  [
+      "requisitos": [
         "Profesional de Estadística, Ingeniería, Económicas o afines.",
         "2 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
         "1 años de experiencia liderando equipos.",
         "MBA o Gestión de proyectos (deseable)",
         "Lenguajes de programación: Python, R",
-        "Base de datos: SQL y NOSQL"],
+        "Base de datos: SQL y NOSQL"
+      ],
       "beneficios": [
         "Linea de carrera.",
         "Oportunidades de desarrollo y aprendizaje continuo.",
-        "Remuneración competitiva."],
+        "Remuneración competitiva."
+      ],
       "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
       "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
       "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
