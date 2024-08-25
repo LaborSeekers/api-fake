@@ -1,24 +1,26 @@
-const jsonServer = require('json-server');
+const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const jsonServer = require('json-server');
 
-const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, 'db.json'));
+
+const app = express();
+const jsonServerRouter = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
+const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const routes= require('./routes.json');
 
 
+app.use(cors());
+app.use(bodyParser.json());
+app.use(middlewares);
+
 //Habilitar CORS
-server.use(cors());
-
-server.use(bodyParser.json());
-
-server.use(middlewares);
-server.use(jsonServer.rewriter(routes));
+app.use(jsonServer.rewriter(routes));
 
 
-server.post('/login', (req, res) => {
+app.post('/login', (req, res) => {
     const { email, password } = req.body;
     console.log('Email recibido:', email);
     console.log('Password recibido:', password);
@@ -40,22 +42,21 @@ server.post('/login', (req, res) => {
 
 
 // Obtener todos las ofertas laborales
-server.get('/api/v1/ofertasLaborales', (req, res) => {
+app.get('/ofertasLaborales', (req, res) => {
   const db = jsonServerRouter.db;
   const ofertasLaborales = db.get('ofertasLaborales').value();
   res.json(ofertasLaborales);
 });
 
-// Obtener oferta laboral
-server.post('/api/v1/ofertasLaborales', (req, res) => {
+// postular oferta laboral
+app.post('/ofertasLaborales/PostularOferta', (req, res) => {
   const db = jsonServerRouter.db;
-  const { userId, ofertaId } = req.body; // Recibe userId y ofertaId desde el cuerpo de la solicitud
+  const { userId, ofertaId } = req.body;
 
   // Busca al usuario por userId
   const user = db.get('users').find({ id: userId }).value();
 
   if (user) {
-    // Si el usuario existe, agrega la ofertaId a la lista de postulaciones si no está ya presente
     if (!user.Postulaciones.includes(ofertaId)) {
       db.get('users')
         .find({ id: userId })
@@ -69,18 +70,15 @@ server.post('/api/v1/ofertasLaborales', (req, res) => {
 });
 
 // Obtener las ofertas laborales a las que un usuario se ha postulado
-server.get('/api/v1/ofertasLaborales', (req, res) => {
+app.get('/ofertasLaborales/Ofertaspostuladas', (req, res) => {
   const db = jsonServerRouter.db;
-  const userId = req.query.userId;
-
+  const userId = parseInt(req.query.userId, 10);
+  console.log("xdxdxdxd");
   // Busca el usuario por ID
-  const usuario = db.get('usuarios').find({ id: parseInt(userId) }).value();
-
+  const usuario = db.get('users').find({ id: userId }).value();
   if (usuario && usuario.Postulaciones && usuario.Postulaciones.length > 0) {
     // Filtra las ofertas laborales que están en la lista de postulaciones del usuario
-    const ofertasLaborales = db.get('ofertasLaborales')
-                               .filter(oferta => usuario.Postulaciones.includes(oferta.id))
-                               .value();
+    const ofertasLaborales = db.get('ofertasLaborales').filter(oferta => usuario.Postulaciones.includes(oferta.id)).value();
     res.json(ofertasLaborales);
   } else {
     res.status(404).json({ message: 'No se encontraron ofertas postuladas para este usuario' });
@@ -89,8 +87,9 @@ server.get('/api/v1/ofertasLaborales', (req, res) => {
 
 
 
+
 // Registrar una nueva oferta laboral
-server.post('/api/v1/ofertasLaborales', (req, res) => {
+app.post('/ofertasLaborales', (req, res) => {
   const db = jsonServerRouter.db;
 
   const {    logo, puesto, location, salary, type, reputacion, fecha, estado, descripcion, requisitos, beneficios, puestoIMG, jornadaIMG, ubicacionIMG,
@@ -125,9 +124,9 @@ server.post('/api/v1/ofertasLaborales', (req, res) => {
 });
 
 
-server.use(router);
+app.use(router);
 
 const port = process.env.PORT || 3000;
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`JSON Server is running on port ${port}`);
     });
