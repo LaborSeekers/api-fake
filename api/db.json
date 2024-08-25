@@ -62,6 +62,87 @@
       "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
       "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
       "sueldoIMG": "assets/imagenes/Tabla/Detalles/sueldo.png"
+    },
+    {
+      "id": 2,
+      "logo": "assets/imagenes/Tabla/tlogo.png",
+      "puesto": "Desarrollador Java",
+      "location": "San Isidro, Lima",
+      "salary": "$1k-3k al mes",
+      "type": "Full Time Remoto",
+      "reputacion": "Baja",
+      "fecha": "Abril 2, 2024 20:18",
+      "estado": "Cancelado",
+      "descripcion": "Desarrolla aplicaciones Java en un entorno de trabajo remoto.",
+      "requisitos":  [
+        "Profesional de Estadística, Ingeniería, Económicas o afines.",
+        "2 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
+        "1 años de experiencia liderando equipos.",
+        "MBA o Gestión de proyectos (deseable)",
+        "Lenguajes de programación: Java",
+        "Base de datos: SQL"],
+      "beneficios": [
+        "Linea de carrera.",
+        "Oportunidades de desarrollo y aprendizaje continuo.",
+        "Remuneración competitiva."],
+      "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
+      "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
+      "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
+      "sueldoIMG": "assets/imagenes/Tabla/Detalles/sueldo.png"
+    },
+    {
+      "id": 3,
+      "logo": "assets/imagenes/Tabla/delsofi.png",
+      "puesto": "Data Engineer - Gestión",
+      "location": "Miraflores, Lima",
+      "salary": "$1k-3k al mes",
+      "type": "Full Time",
+      "reputacion": "Media",
+      "fecha": "Mar 2 , 2023 15:30",
+      "estado": "Finalizado",
+      "descripcion": "Encargado de la gestión y el procesamiento de datos.",
+      "requisitos":  [
+        "Profesional de Estadística, Ingeniería, Económicas o afines.",
+        "2 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
+        "1 años de experiencia liderando equipos.",
+        "MBA o Gestión de proyectos (deseable)",
+        "Lenguajes de programación: Python",
+        "Base de datos: SQL y NOSQL"],
+      "beneficios": [
+        "Linea de carrera.",
+        "Oportunidades de desarrollo y aprendizaje continuo.",
+        "Remuneración competitiva."],
+      "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
+      "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
+      "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
+      "sueldoIMG": "assets/imagenes/Tabla/Detalles/sueldo.png"
+    },
+    {
+      "id": 4,
+      "logo": "assets/imagenes/Tabla/bbva.png",
+      "puesto": "Data Advanced Analytics",
+      "location": "Javier Prado, Lima",
+      "salary": "$5k-7k al mes",
+      "type": "Full-Time Híbrido",
+      "reputacion": "Alta",
+      "fecha": "Mar 27 , 2023 11:45",
+      "estado": "Activo",
+      "descripcion": "Analiza datos avanzados para obtener insights empresariales.",
+      "requisitos":  [
+        "Profesional de Estadística, Ingeniería, Económicas o afines.",
+        "2 años de experiencia habiendo llevado proyectos de modelamiento de datos de principio a fin, de preferencia experiencia en sector Banca, Finanzas, Retail, Telecomunicaciones, Consumo Masivo u otros.",
+        "1 años de experiencia liderando equipos.",
+        "MBA o Gestión de proyectos (deseable)",
+        "Lenguajes de programación: Python, R",
+        "Base de datos: SQL y NOSQL"],
+      "beneficios": [
+        "Linea de carrera.",
+        "Oportunidades de desarrollo y aprendizaje continuo.",
+        "Remuneración competitiva."],
+      "puestoIMG": "assets/imagenes/Tabla/Detalles/Puesto.png",
+      "jornadaIMG": "assets/imagenes/Tabla/Detalles/Reloj.png",
+      "ubicacionIMG": "assets/imagenes/Tabla/Detalles/Ubicacion.png",
+      "sueldoIMG": "assets/imagenes/Tabla/Detalles/sueldo.png"
     }
   ]
 }
