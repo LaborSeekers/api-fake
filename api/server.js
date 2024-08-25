@@ -46,6 +46,49 @@ server.get('/api/v1/ofertasLaborales', (req, res) => {
   res.json(ofertasLaborales);
 });
 
+// Obtener oferta laboral
+server.post('/api/v1/ofertasLaborales/PostularOferta', (req, res) => {
+  const db = jsonServerRouter.db;
+  const { userId, ofertaId } = req.body; // Recibe userId y ofertaId desde el cuerpo de la solicitud
+
+  // Busca al usuario por userId
+  const user = db.get('users').find({ id: userId }).value();
+
+  if (user) {
+    // Si el usuario existe, agrega la ofertaId a la lista de postulaciones si no está ya presente
+    if (!user.Postulaciones.includes(ofertaId)) {
+      db.get('users')
+        .find({ id: userId })
+        .assign({ Postulaciones: [...user.Postulaciones, ofertaId] })
+        .write();
+    }
+    res.status(200).json({ message: 'Postulación exitosa', postulaciones: user.Postulaciones });
+  } else {
+    res.status(404).json({ message: 'Usuario no encontrado' });
+  }
+});
+
+// Obtener las ofertas laborales a las que un usuario se ha postulado
+server.get('/api/v1/ofertasLaborales/Ofertaspostuladas', (req, res) => {
+  const db = jsonServerRouter.db;
+  const userId = req.query.userId;
+
+  // Busca el usuario por ID
+  const usuario = db.get('usuarios').find({ id: parseInt(userId) }).value();
+
+  if (usuario && usuario.Postulaciones && usuario.Postulaciones.length > 0) {
+    // Filtra las ofertas laborales que están en la lista de postulaciones del usuario
+    const ofertasLaborales = db.get('ofertasLaborales')
+                               .filter(oferta => usuario.Postulaciones.includes(oferta.id))
+                               .value();
+    res.json(ofertasLaborales);
+  } else {
+    res.status(404).json({ message: 'No se encontraron ofertas postuladas para este usuario' });
+  }
+});
+
+
+
 // Registrar una nueva oferta laboral
 server.post('/api/v1/ofertasLaborales', (req, res) => {
   const db = jsonServerRouter.db;
@@ -80,13 +123,6 @@ server.post('/api/v1/ofertasLaborales', (req, res) => {
 
   res.json(newOfertaLaboral);
 });
-
-
-
-
-
-
-
 
 
 server.use(router);
