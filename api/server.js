@@ -47,7 +47,7 @@ server.get('/api/v1/ofertasLaborales', (req, res) => {
 });
 
 // Obtener oferta laboral
-server.post('/api/v1/ofertasLaborales/PostularOferta', (req, res) => {
+server.post('/api/v1/ofertasLaborales', (req, res) => {
   const db = jsonServerRouter.db;
   const { userId, ofertaId } = req.body; // Recibe userId y ofertaId desde el cuerpo de la solicitud
 
@@ -69,7 +69,7 @@ server.post('/api/v1/ofertasLaborales/PostularOferta', (req, res) => {
 });
 
 // Obtener las ofertas laborales a las que un usuario se ha postulado
-server.get('/api/v1/ofertasLaborales/Ofertaspostuladas', (req, res) => {
+server.get('/api/v1/ofertasLaborales', (req, res) => {
   const db = jsonServerRouter.db;
   const userId = req.query.userId;
 
